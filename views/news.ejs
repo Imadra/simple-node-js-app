@@ -1,0 +1,28 @@
+<html lang="en">
+	<head>
+		<title>News</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<style>
+			body {background-color: #98bfd5;}
+			.block {text-align: center; width: 70%; margin-left: 15%;}
+			h1 { color: #494949; font-size: 3.5em; }
+			p { color: #494949; font-size: 1.2em; }
+		</style>
+	</head>
+	<body>
+		<% include blocks/header.ejs %>
+		<div class="block">
+			<h1>News with ID - <%= newsId %></h1>
+			<p><b>Title:</b> <%= obj.title %></p>
+			<p><b>ID:</b> <%= obj.id %></p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quia. Aperiam dolor, corporis repellendus soluta amet at temporibus atque qui tenetur cumque eaque, aspernatur deleniti aliquid voluptates reprehenderit voluptate molestias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet molestias incidunt velit? Aut ipsam, magni accusantium assumenda laudantium, pariatur quasi minus nesciunt ratione nulla temporibus maiores consectetur velit quo rem!</p>
+			<ul>
+				<% obj.paragraphs.forEach(function(item) { %>
+					<li><%= item %></li>
+				<% }); %>
+			</ul>
+		</div>
+	</body>
+</html>
